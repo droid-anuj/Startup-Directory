@@ -1,0 +1,11 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+/* tailwind.css */
+@layer utilities {
+    .custom-bg-color {
+      background-color: black;
+    }
+  }
+  @import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+  
