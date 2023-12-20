@@ -8,16 +8,15 @@ dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 5000;
-
+const MONGO_URI = "mongodb+srv://helloanuj:helloanuj12345@cluster.gnr9kyw.mongodb.net/Startup?retryWrites=true&w=majority";
 // Set up CORS middleware before API routes
 app.use(cors());
 
 app.use(express.json());
 app.use("/api", apiRoutes);
+// Use the environment variable for MongoDB URI
 
-const MONGODB_URI = process.env.MONGODB_URI; // Use the environment variable for MongoDB URI
-
-mongoose.connect(MONGODB_URI, {
+mongoose.connect(MONGO_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
