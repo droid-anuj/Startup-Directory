@@ -13,7 +13,7 @@ function Home() {
   const fetchData = async () => {
     try {
       const response = await fetch(
-        `http://localhost:5000/api/startups?page=${page}&limit=20`
+        `https://startup-directory-droid-anuj.vercel.app/api/startups?page=${page}&limit=20`
       );
       const data = await response.json();
       // Append the new data to the existing data
