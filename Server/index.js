@@ -10,7 +10,11 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 const MONGO_URI = "mongodb+srv://helloanuj:helloanuj12345@cluster.gnr9kyw.mongodb.net/Startup?retryWrites=true&w=majority";
 // Set up CORS middleware before API routes
-app.use(cors());
+app.use(
+	cors({
+		origin: "https://vercel.com/droid-anuj/startup-directory-ziit/GJYDETnVeqLjXgWcZkkvkNCT4Hnr",
+	})
+);
 
 app.use(express.json());
 app.use("/api", apiRoutes);
